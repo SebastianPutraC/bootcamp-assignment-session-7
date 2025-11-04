@@ -6,9 +6,12 @@ export default async function StorePage()
     const storeData = await storeRes.json();
     const firstFiveProduct = storeData.slice(0, 5);
 
+
     return(
-        <div>
-            <ProductList items={firstFiveProduct}/>
-        </div>
+        <>
+            <div>
+                <ProductList items={firstFiveProduct}/>
+            </div>
+        </>
     )
 }
